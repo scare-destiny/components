@@ -7,13 +7,13 @@ const imageIds = [
 
 export default function FluidHoverCard() {
   return (
-    <div className="grid min-h-screen place-items-center">
-      <ul className="flex w-full max-w-6xl gap-4 ">
+    <div className="grid min-h-screen md:place-items-center">
+      <ul className="flex w-full max-w-6xl flex-col gap-4 md:flex-row  ">
         {[...Array(4).keys()].map((_, index) => (
           // eslint-disable-next-line react/jsx-key
           <li
             key={index}
-            className="group relative inset-0 h-[500px]  w-full flex-1 overflow-hidden rounded-2xl bg-rose-300 transition-all hover:grow-[1.25]  "
+            className="group relative inset-0 h-[500px]  w-full overflow-hidden rounded-2xl bg-rose-300 transition-all hover:grow-[1.25] lg:flex-1  "
           >
             <img
               className="absolute h-full w-full object-cover"
