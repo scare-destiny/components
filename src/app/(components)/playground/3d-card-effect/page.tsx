@@ -76,7 +76,7 @@ const CardContainer = ({
   )
 }
 
-export const CardBody = ({
+const CardBody = ({
   children,
   className,
 }: {
@@ -95,7 +95,7 @@ export const CardBody = ({
   )
 }
 
-export const CardItem = ({
+const CardItem = ({
   as: Tag = 'div',
   children,
   className,
@@ -145,7 +145,7 @@ export const CardItem = ({
 }
 
 // Create a hook to use the context
-export const useMouseEnter = () => {
+const useMouseEnter = () => {
   const context = useContext(MouseEnterContext)
   if (context === undefined) {
     throw new Error('useMouseEnter must be used within a MouseEnterProvider')
