@@ -2,11 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 
-interface ImageSliderProps {
-  imageUrls: string[]
-}
-
-const ImageSlider: React.FC<ImageSliderProps> = () => {
+const ImageSlider = () => {
   const imageUrls = [
     'https://images.unsplash.com/photo-1506744038136-46273834b3fb',
     'https://images.unsplash.com/photo-1511919884226-fd3cad34687c',
