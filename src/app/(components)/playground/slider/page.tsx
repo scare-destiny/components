@@ -6,13 +6,13 @@ interface ImageSliderProps {
   imageUrls: string[]
 }
 
-const imageUrls = [
-  'https://images.unsplash.com/photo-1506744038136-46273834b3fb',
-  'https://images.unsplash.com/photo-1511919884226-fd3cad34687c',
-  'https://images.unsplash.com/photo-1494500764479-0c8f2919a3d8',
-]
+// const imageUrls = [
+//   'https://images.unsplash.com/photo-1506744038136-46273834b3fb',
+//   'https://images.unsplash.com/photo-1511919884226-fd3cad34687c',
+//   'https://images.unsplash.com/photo-1494500764479-0c8f2919a3d8',
+// ]
 
-export const ImageSlider: React.FC<ImageSliderProps> = () => {
+export const ImageSlider: React.FC<ImageSliderProps> = ({ imageUrls }) => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const slideRef = useRef<HTMLDivElement>(null)
 
