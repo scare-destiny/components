@@ -2,17 +2,19 @@ import { cn } from '@/utils/cn'
 import React from 'react'
 import { motion } from 'framer-motion'
 
+type BackgroundGradientProps = {
+  children?: React.ReactNode
+  className?: string
+  containerClassName?: string
+  animate?: boolean
+}
+
 const BackgroundGradient = ({
   children,
   className,
   containerClassName,
   animate = true,
-}: {
-  children?: React.ReactNode
-  className?: string
-  containerClassName?: string
-  animate?: boolean
-}) => {
+}: BackgroundGradientProps) => {
   const variants = {
     initial: {
       backgroundPosition: '0 50%',
