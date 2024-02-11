@@ -73,4 +73,16 @@ const BackgroundGradient = ({
   )
 }
 
-export default BackgroundGradient
+export default function Page() {
+  return (
+    <BackgroundGradient animate={true}>
+      <div className="p-4">
+        <h1 className="text-4xl font-bold text-white">Hello</h1>
+        <p className="text-white">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+    </BackgroundGradient>
+  )
+}
