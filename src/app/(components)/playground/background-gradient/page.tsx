@@ -9,12 +9,17 @@ type BackgroundGradientProps = {
   animate?: boolean
 }
 
-const BackgroundGradient = ({
+export const BackgroundGradient = ({
   children,
   className,
   containerClassName,
   animate = true,
-}: BackgroundGradientProps) => {
+}: {
+  children?: React.ReactNode
+  className?: string
+  containerClassName?: string
+  animate?: boolean
+}) => {
   const variants = {
     initial: {
       backgroundPosition: '0 50%',
