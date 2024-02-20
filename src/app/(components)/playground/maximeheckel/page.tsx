@@ -92,10 +92,38 @@ const Example2 = () => {
   )
 }
 
+const ExampleButton = () => {
+  const buttonVariants = {
+    hover: {
+      scale: 1.5,
+    },
+    pressed: {
+      scale: 0.5,
+    },
+    rest: {
+      scale: 1,
+    },
+  }
+
+  return (
+    <motion.button
+      className="border-2 border-black  bg-white px-8 py-0.5 text-sm uppercase text-neutral-700 shadow-[1px_1px_rgba(0,0,0),2px_2px_rgba(0,0,0),3px_3px_rgba(0,0,0),4px_4px_rgba(0,0,0),5px_5px_0px_0px_rgba(0,0,0)] transition duration-200"
+      initial="rest"
+      whileHover="hover"
+      whileTap="pressed"
+      variants={buttonVariants}
+			
+    >
+      Brutal
+    </motion.button>
+  )
+}
+
 const Examples = () => (
   <div>
     <Example1 />
     <Example2 />
+    <ExampleButton />
   </div>
 )
 
