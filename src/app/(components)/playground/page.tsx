@@ -1,7 +1,7 @@
 import { getComponents } from '@/lib/components'
 
-export default async function Page(): JSX.Element {
-	const componentsData = await getComponents()
+export default async function Page(): Promise<JSX.Element> {
+  const componentsData = await getComponents()
 
   return (
     <div>
