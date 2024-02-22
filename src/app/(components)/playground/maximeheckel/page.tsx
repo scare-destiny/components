@@ -2,6 +2,9 @@
 
 import { motion } from 'framer-motion'
 
+// https://blog.maximeheckel.com/posts/guide-animations-spark-joy-framer-motion/
+// https://blog.maximeheckel.com/posts/advanced-animation-patterns-with-framer-motion/
+
 const Example1 = () => {
   return (
     <div style={{ marginBottom: '50px' }}>
@@ -112,7 +115,6 @@ const ExampleButton = () => {
       whileHover="hover"
       whileTap="pressed"
       variants={buttonVariants}
-			
     >
       Brutal
     </motion.button>
