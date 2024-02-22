@@ -1,4 +1,5 @@
 import Link from 'next/link'
+
 import { getComponents } from '@/lib/components'
 
 export default async function Page(): Promise<JSX.Element> {
