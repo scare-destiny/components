@@ -24,7 +24,6 @@ export default async function Page(): Promise<JSX.Element> {
           </div>
         </div>
       ))}
-      <Resources />
     </div>
   )
 }
