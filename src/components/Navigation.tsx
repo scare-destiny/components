@@ -231,15 +231,18 @@ function NavigationGroup({
 
 export const navigation: Array<NavGroup> = [
   {
-    title: 'Guides',
+    title: 'Playground',
     links: [
-      { title: 'Introduction', href: '/' },
-      { title: 'Text Generate Effect', href: '/text-generate-effect' },
-      { title: 'SDKs', href: '/sdks' },
-      { title: 'Authentication', href: '/authentication' },
-      { title: 'Pagination', href: '/pagination' },
-      { title: 'Errors', href: '/errors' },
-      { title: 'Webhooks', href: '/webhooks' },
+      { title: '3d-card-effect', href: '/playground/3d-card-effect' },
+      { title: 'fluid-hover', href: '/playground/fluid-hover' },
+      { title: 'maximeheckel', href: '/playground/maximeheckel' },
+      { title: 'meteors', href: '/playground/meteors' },
+      { title: 'parallax', href: '/playground/parallax' },
+      { title: 'slider', href: '/playground/slider' },
+      {
+        title: 'text-generate-effect',
+        href: '/playground/text-generate-effect',
+      },
     ],
   },
   {
