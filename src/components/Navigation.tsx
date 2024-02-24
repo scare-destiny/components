@@ -231,7 +231,7 @@ function NavigationGroup({
 
 export const navigation: Array<NavGroup> = [
   {
-    title: 'Playground',
+    title: 'Components',
     links: [
       { title: '3d-card-effect', href: '/playground/3d-card-effect' },
       { title: 'fluid-hover', href: '/playground/fluid-hover' },
@@ -245,16 +245,16 @@ export const navigation: Array<NavGroup> = [
       },
     ],
   },
-  {
-    title: 'Resources',
-    links: [
-      { title: 'Contacts', href: '/contacts' },
-      { title: 'Conversations', href: '/conversations' },
-      { title: 'Messages', href: '/messages' },
-      { title: 'Groups', href: '/groups' },
-      { title: 'Attachments', href: '/attachments' },
-    ],
-  },
+  // {
+  //   title: 'Resources',
+  //   links: [
+  //     { title: 'Contacts', href: '/contacts' },
+  //     { title: 'Conversations', href: '/conversations' },
+  //     { title: 'Messages', href: '/messages' },
+  //     { title: 'Groups', href: '/groups' },
+  //     { title: 'Attachments', href: '/attachments' },
+  //   ],
+  // },
 ]
 
 export function Navigation(props: React.ComponentPropsWithoutRef<'nav'>) {
