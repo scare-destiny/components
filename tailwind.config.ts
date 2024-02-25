@@ -42,6 +42,7 @@ export default {
       },
       animation: {
         'meteor-effect': 'meteor 5s linear infinite',
+        'border-spin': 'border-spin 7s linear infinite',
       },
       keyframes: {
         meteor: {
@@ -50,6 +51,11 @@ export default {
           '100%': {
             transform: 'rotate(215deg) translateX(-500px)',
             opacity: '0',
+          },
+        },
+        'border-spin': {
+          '100%': {
+            transform: 'rotate(-360deg)',
           },
         },
       },
