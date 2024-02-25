@@ -239,6 +239,7 @@ export const navigation: Array<NavGroup> = [
       { title: 'meteors', href: '/playground/meteors' },
       { title: 'parallax', href: '/playground/parallax' },
       { title: 'slider', href: '/playground/slider' },
+      { title: 'border-gradient', href: '/playground/border-gradient' },
       {
         title: 'text-generate-effect',
         href: '/playground/text-generate-effect',
