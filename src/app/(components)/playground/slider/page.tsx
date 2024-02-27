@@ -25,7 +25,7 @@ const ImageSlider = () => {
   }, [])
 
   return (
-    <div className="slider-container relative mx-auto w-full py-10">
+    <div className="slider-container relative mx-auto w-full overflow-hidden py-10 ">
       {imageUrls.map((url, index) => (
         <motion.div
           key={index}
