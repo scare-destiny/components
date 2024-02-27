@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 import React, { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 
@@ -29,7 +30,9 @@ const ImageSlider = () => {
       {imageUrls.map((url, index) => (
         <motion.div
           key={index}
-          className={`slide ${index === currentSlide ? 'active' : 'hidden'}`}
+          className={`slide aspect-video ${
+            index === currentSlide ? 'active' : 'hidden'
+          }`}
           ref={index === currentSlide ? slideRef : null}
           initial={{ opacity: 0.5, scale: 1 }}
           animate={{
@@ -38,8 +41,9 @@ const ImageSlider = () => {
           }}
           transition={{ duration: 0.9 }} // Add optional transition for smoothness
         >
-          <img
+          <Image
             src={url}
+            fill={true}
             alt={`Slide ${index + 1}`}
             className="h-64 w-full object-cover"
           />
