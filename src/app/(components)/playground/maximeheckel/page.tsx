@@ -12,8 +12,8 @@ const Example1 = () => {
       <motion.div
         style={{
           background: 'linear-gradient(90deg,#ffa0ae 0%,#aacaef 75%)',
-          height: '100px',
-          width: '100px',
+          height: '50px',
+          width: '50px',
           borderRadius: '10px',
         }}
         /**
@@ -56,8 +56,8 @@ const Example2 = () => {
       <motion.div
         style={{
           background: 'linear-gradient(90deg,#ffa0ae 0%,#aacaef 75%)',
-          height: '100px',
-          width: '100px',
+          height: '50px',
+          width: '50px',
           borderRadius: '10px',
         }}
         /**
