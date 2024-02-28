@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useState } from 'react'
 
 // https://blog.maximeheckel.com/posts/guide-animations-spark-joy-framer-motion/
 // https://blog.maximeheckel.com/posts/advanced-animation-patterns-with-framer-motion/
@@ -97,9 +98,9 @@ const Example2 = () => {
 
 const ExampleButton = () => {
   const buttonVariants = {
-    hover: {
-      scale: 1.5,
-    },
+    hover: (clicked: any) => ({
+      scale: clicked ? 1 : 1.6,
+    }),
     pressed: {
       scale: 0.5,
     },
@@ -108,6 +109,8 @@ const ExampleButton = () => {
     },
   }
 
+  const [clicked, setClicked] = useState(false)
+
   return (
     <motion.button
       className="border-2 border-black  bg-white px-8 py-0.5 text-sm uppercase text-neutral-700 shadow-[1px_1px_rgba(0,0,0),2px_2px_rgba(0,0,0),3px_3px_rgba(0,0,0),4px_4px_rgba(0,0,0),5px_5px_0px_0px_rgba(0,0,0)] transition duration-200"
@@ -115,6 +118,8 @@ const ExampleButton = () => {
       whileHover="hover"
       whileTap="pressed"
       variants={buttonVariants}
+      custom={clicked}
+      onClick={() => setClicked(!clicked)}
     >
       Brutal
     </motion.button>
