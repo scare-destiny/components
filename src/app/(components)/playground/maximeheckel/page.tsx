@@ -97,6 +97,9 @@ const Example2 = () => {
 }
 
 const ExampleButton = () => {
+  const [clicked, setClicked] = useState(false)
+
+
   const buttonVariants = {
     hover: (clicked: any) => ({
       scale: clicked ? 1 : 1.6,
@@ -109,7 +112,6 @@ const ExampleButton = () => {
     },
   }
 
-  const [clicked, setClicked] = useState(false)
 
   return (
     <motion.button
@@ -123,6 +125,14 @@ const ExampleButton = () => {
     >
       Brutal
     </motion.button>
+  )
+}
+
+const ExampleButton2 = () => {
+  return (
+<div>
+  
+</div>
   )
 }
 
