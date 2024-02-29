@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 // https://blog.maximeheckel.com/posts/guide-animations-spark-joy-framer-motion/
 // https://blog.maximeheckel.com/posts/advanced-animation-patterns-with-framer-motion/
@@ -99,7 +99,6 @@ const Example2 = () => {
 const ExampleButton = () => {
   const [clicked, setClicked] = useState(false)
 
-
   const buttonVariants = {
     hover: (clicked: any) => ({
       scale: clicked ? 1 : 1.6,
@@ -111,7 +110,6 @@ const ExampleButton = () => {
       scale: 1,
     },
   }
-
 
   return (
     <motion.button
@@ -129,10 +127,62 @@ const ExampleButton = () => {
 }
 
 const ExampleButton2 = () => {
+  const [isClicked, setIsClicked] = useState(false)
+
+  useEffect(() => {
+    if (isClicked) {
+      setTimeout(() => {
+        setIsClicked(false)
+      }, 1000)
+    }
+  }, [isClicked])
+
+  const duration = 0.6
+
+  const buttonVariants = {
+    hover: {
+      rotate: 360,
+    },
+    pressed: {
+      scale: 0.95,
+    },
+    clicked: {
+      scale: 1,
+    },
+    notClicked: {
+      scale: 1,
+    },
+  }
+
   return (
-<div>
-  
-</div>
+    <motion.button
+      style={{
+        background: 'linear-gradient(90deg,#ffa0ae 0%,#aacaef 75%)',
+        color: 'black',
+        border: 'none',
+        height: '50px',
+        width: '200px',
+        borderRadius: '10px',
+        cursor: isClicked ? 'default' : 'pointer',
+        outline: 'none',
+        boxShadow: '6px 4px 12px -6px rgba(0,24,40,0.25)',
+      }}
+      aria-label="Click Me!"
+      title="Click Me!"
+      onClick={() => {
+        setIsClicked(true)
+      }}
+      variants={buttonVariants}
+      animate={isClicked ? 'clicked' : 'notClicked'}
+      whileHover="hover"
+      whileDrag="pressed"
+      transition={{
+        duration,
+      }}
+    >
+      {' '}
+      {isClicked ? 'Clicked!' : 'Click Me!'}
+    </motion.button>
   )
 }
 
@@ -141,6 +191,7 @@ const Examples = () => (
     <Example1 />
     <Example2 />
     <ExampleButton />
+    <ExampleButton2 />
   </div>
 )
 
