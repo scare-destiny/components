@@ -142,6 +142,7 @@ const ExampleButton2 = () => {
   const buttonVariants = {
     hover: {
       rotate: 360,
+      scale: 1.7,
     },
     pressed: {
       scale: 0.95,
